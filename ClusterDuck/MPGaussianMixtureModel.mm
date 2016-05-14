@@ -19,6 +19,12 @@ using namespace Eigen;
 using namespace libcluster;
 using namespace distributions;
 
+@interface MPBayesianGaussianMixture ()
+- (instancetype)initWithExpectedClusterAssignments:(NSArray <NSNumber *> *)assignments
+                                    clusterWeights:(NSArray <NSNumber *> *)weights
+                                clusterCovariances:(NSArray <NSNumber *> *)covariances;
+@end
+
 @implementation MPGaussianMixtureModel
 
 + (std::vector<Eigen::MatrixXd>)doubleMatricesForInput:(NSArray<NSArray<NSNumber *> *> *)numbers {
@@ -62,6 +68,28 @@ using namespace distributions;
     return M;
 }
 
+- (NSArray<NSNumber *> *)expectedClusterAssignmentsForPosteriorDistribution:(const MatrixXd &)qZ {
+    NSMutableArray *expectedClusters = [NSMutableArray new];
+    
+    for (long r = 0, rows = qZ.rows(); r < rows; r++) {
+        long maxIndex = -1;
+        double max = 0;
+        for (long c = 0, cols = qZ.cols(); c < cols; c++) {
+            double v = qZ(r, c);
+            
+            if (max < v) {
+                max = v;
+                maxIndex = c;
+            }
+        }
+        
+        NSParameterAssert(maxIndex >= 0);
+        [expectedClusters addObject:@(maxIndex)];
+    }
+    
+    return expectedClusters;
+}
+
 + (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(NSArray<NSArray<NSNumber *> *> *)numbers {
     MatrixXd X = [self.class doubleMatrixForInput:numbers];
     
@@ -81,8 +109,19 @@ using namespace distributions;
     
     cout << endl << "Cluster Weights:" << weights.Elogweight().exp().transpose() << endl;
     
-    cout << endl << "Cluster means:" << endl;
+    cout << endl << "Variational Posterior :" << weights.Elogweight().exp().transpose() << endl;
+    for (long r = 0, rows = qZ.rows(); r < rows; r++) {
+        for (long c = 0, cols = qZ.cols(); c < cols; c++) {
+            cout << qZ(r, c);
+            
+            if (c < (qZ.cols() - 1)) {
+                cout << ",";
+            }
+        }
+        cout << endl;
+    }
     
+    cout << "Cluster means" << endl;
     for (vector<GaussWish>::iterator k=clusters.begin(); k < clusters.end(); ++k)
         cout << k->getmean() << endl;
     
@@ -91,6 +130,25 @@ using namespace distributions;
         cout << k->getcov() << endl << endl;
     
     return nil;
+}
+
+@end
+
+
+@implementation MPBayesianGaussianMixture
+
+- (instancetype)initWithExpectedClusterAssignments:(NSArray <NSNumber *> *)assignments
+                                    clusterWeights:(NSArray <NSNumber *> *)weights
+                                clusterCovariances:(NSArray <NSNumber *> *)covariances {
+    self = [super init];
+    
+    if (self) {
+        _expectedClusterAssignments = assignments;
+        _clusterWeights = weights;
+        _clusterCovariances = covariances;
+    }
+    
+    return self;
 }
 
 @end

@@ -8,10 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
+@class MPBayesianGaussianMixture;
+
 @interface MPGaussianMixtureModel : NSObject
 
-- (instancetype)init NS_UNAVAILABLE;
+- (nonnull instancetype)init NS_UNAVAILABLE;
 
-+ (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(NSArray<NSArray<NSNumber *> *> *)numbers;
++ (nonnull NSArray<MPBayesianGaussianMixture*> *)bayesianGaussianMixtureModelForInput:(nonnull NSArray<NSArray<NSNumber *> *> *)numbers;
+
+@end
+
+@interface MPBayesianGaussianMixture: NSObject
+
+- (nonnull instancetype)init NS_UNAVAILABLE;
+
+@property (readonly, nonnull) NSArray <NSNumber *> *expectedClusterAssignments;
+@property (readonly, nonnull) NSArray <NSNumber *> *clusterWeights;
+@property (readonly, nonnull) NSArray <NSNumber *> *clusterCovariances;
 
 @end
