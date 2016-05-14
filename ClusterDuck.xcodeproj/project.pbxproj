@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F14315F1CE74D6300E8A34F /* ClusterDuck.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14315E1CE74D6300E8A34F /* ClusterDuck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F1431661CE74D6300E8A34F /* ClusterDuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */; };
+		5F14316B1CE74D6300E8A34F /* ClusterDuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */; };
+		5F1431761CE74DB400E8A34F /* libcluster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1431751CE74DB400E8A34F /* libcluster.a */; };
+		5F1431791CE74DF900E8A34F /* MPGaussianMixtureModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1431771CE74DF900E8A34F /* MPGaussianMixtureModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F14317A1CE74DF900E8A34F /* MPGaussianMixtureModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */; };
+		5F14317C1CE7514800E8A34F /* testdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14317B1CE7514800E8A34F /* testdata.h */; };
+		5F14317E1CE751A100E8A34F /* libiomp5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14317D1CE751A100E8A34F /* libiomp5.dylib */; };
+		5F1431801CE751DB00E8A34F /* libiomp5.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 5F14317D1CE751A100E8A34F /* libiomp5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F1431671CE74D6300E8A34F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F1431521CE74D6200E8A34F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F14315A1CE74D6200E8A34F;
+			remoteInfo = ClusterDuck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F14317F1CE751D100E8A34F /* Copy Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F1431801CE751DB00E8A34F /* libiomp5.dylib in Copy Libraries */,
+			);
+			name = "Copy Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClusterDuck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F14315E1CE74D6300E8A34F /* ClusterDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClusterDuck.h; sourceTree = "<group>"; };
+		5F1431601CE74D6300E8A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1431651CE74D6300E8A34F /* ClusterDuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClusterDuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClusterDuckTests.m; sourceTree = "<group>"; };
+		5F14316C1CE74D6300E8A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F1431751CE74DB400E8A34F /* libcluster.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcluster.a; path = Libraries/libcluster.a; sourceTree = "<group>"; };
+		5F1431771CE74DF900E8A34F /* MPGaussianMixtureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGaussianMixtureModel.h; sourceTree = "<group>"; };
+		5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MPGaussianMixtureModel.mm; sourceTree = "<group>"; };
+		5F14317B1CE7514800E8A34F /* testdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testdata.h; sourceTree = "<group>"; };
+		5F14317D1CE751A100E8A34F /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = Libraries/libiomp5.dylib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F1431571CE74D6200E8A34F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1431761CE74DB400E8A34F /* libcluster.a in Frameworks */,
+				5F14317E1CE751A100E8A34F /* libiomp5.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1431621CE74D6300E8A34F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F1431661CE74D6300E8A34F /* ClusterDuck.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F1431511CE74D6200E8A34F = {
+			isa = PBXGroup;
+			children = (
+				5F1431751CE74DB400E8A34F /* libcluster.a */,
+				5F14317D1CE751A100E8A34F /* libiomp5.dylib */,
+				5F14315D1CE74D6200E8A34F /* ClusterDuck */,
+				5F1431691CE74D6300E8A34F /* ClusterDuckTests */,
+				5F14315C1CE74D6200E8A34F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F14315C1CE74D6200E8A34F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */,
+				5F1431651CE74D6300E8A34F /* ClusterDuckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F14315D1CE74D6200E8A34F /* ClusterDuck */ = {
+			isa = PBXGroup;
+			children = (
+				5F14317B1CE7514800E8A34F /* testdata.h */,
+				5F14315E1CE74D6300E8A34F /* ClusterDuck.h */,
+				5F1431601CE74D6300E8A34F /* Info.plist */,
+				5F1431771CE74DF900E8A34F /* MPGaussianMixtureModel.h */,
+				5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */,
+			);
+			path = ClusterDuck;
+			sourceTree = "<group>";
+		};
+		5F1431691CE74D6300E8A34F /* ClusterDuckTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */,
+				5F14316C1CE74D6300E8A34F /* Info.plist */,
+			);
+			path = ClusterDuckTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5F1431581CE74D6200E8A34F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F14315F1CE74D6300E8A34F /* ClusterDuck.h in Headers */,
+				5F14317C1CE7514800E8A34F /* testdata.h in Headers */,
+				5F1431791CE74DF900E8A34F /* MPGaussianMixtureModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F14315A1CE74D6200E8A34F /* ClusterDuck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F14316F1CE74D6300E8A34F /* Build configuration list for PBXNativeTarget "ClusterDuck" */;
+			buildPhases = (
+				5F1431561CE74D6200E8A34F /* Sources */,
+				5F1431571CE74D6200E8A34F /* Frameworks */,
+				5F1431581CE74D6200E8A34F /* Headers */,
+				5F1431591CE74D6200E8A34F /* Resources */,
+				5F14317F1CE751D100E8A34F /* Copy Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClusterDuck;
+			productName = ClusterDuck;
+			productReference = 5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5F1431641CE74D6300E8A34F /* ClusterDuckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F1431721CE74D6300E8A34F /* Build configuration list for PBXNativeTarget "ClusterDuckTests" */;
+			buildPhases = (
+				5F1431611CE74D6300E8A34F /* Sources */,
+				5F1431621CE74D6300E8A34F /* Frameworks */,
+				5F1431631CE74D6300E8A34F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F1431681CE74D6300E8A34F /* PBXTargetDependency */,
+			);
+			name = ClusterDuckTests;
+			productName = ClusterDuckTests;
+			productReference = 5F1431651CE74D6300E8A34F /* ClusterDuckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F1431521CE74D6200E8A34F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Matias Piipari & Co";
+				TargetAttributes = {
+					5F14315A1CE74D6200E8A34F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					5F1431641CE74D6300E8A34F = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 5F1431551CE74D6200E8A34F /* Build configuration list for PBXProject "ClusterDuck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F1431511CE74D6200E8A34F;
+			productRefGroup = 5F14315C1CE74D6200E8A34F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F14315A1CE74D6200E8A34F /* ClusterDuck */,
+				5F1431641CE74D6300E8A34F /* ClusterDuckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F1431591CE74D6200E8A34F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1431631CE74D6300E8A34F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F1431561CE74D6200E8A34F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F14317A1CE74DF900E8A34F /* MPGaussianMixtureModel.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1431611CE74D6300E8A34F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F14316B1CE74D6300E8A34F /* ClusterDuckTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F1431681CE74D6300E8A34F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F14315A1CE74D6200E8A34F /* ClusterDuck */;
+			targetProxy = 5F1431671CE74D6300E8A34F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5F14316D1CE74D6300E8A34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					$SRCROOT/Include/Eigen,
+					$SRCROOT/Include/libcluster,
+					$SRCROOT/Include/libiomp,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F14316E1CE74D6300E8A34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					$SRCROOT/Include/Eigen,
+					$SRCROOT/Include/libcluster,
+					$SRCROOT/Include/libiomp,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F1431701CE74D6300E8A34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ClusterDuck/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5F1431711CE74D6300E8A34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = ClusterDuck/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuck;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5F1431731CE74D6300E8A34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClusterDuckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F1431741CE74D6300E8A34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ClusterDuckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F1431551CE74D6200E8A34F /* Build configuration list for PBXProject "ClusterDuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F14316D1CE74D6300E8A34F /* Debug */,
+				5F14316E1CE74D6300E8A34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F14316F1CE74D6300E8A34F /* Build configuration list for PBXNativeTarget "ClusterDuck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1431701CE74D6300E8A34F /* Debug */,
+				5F1431711CE74D6300E8A34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5F1431721CE74D6300E8A34F /* Build configuration list for PBXNativeTarget "ClusterDuckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F1431731CE74D6300E8A34F /* Debug */,
+				5F1431741CE74D6300E8A34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F1431521CE74D6200E8A34F /* Project object */;
+}
