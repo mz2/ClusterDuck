@@ -145,6 +145,7 @@
 				5F1431581CE74D6200E8A34F /* Headers */,
 				5F1431591CE74D6200E8A34F /* Resources */,
 				5F14317F1CE751D100E8A34F /* Copy Libraries */,
+				5F3A5D6F1CE8AEFE005CB68B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -224,6 +225,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F3A5D6F1CE8AEFE005CB68B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change /Users/mz2/Projects/libcluster/lib/Debug/libcluster.dylib \\\n@rpath/ClusterDuck.framework/Versions/A/Frameworks/libcluster.dylib \\\n${TARGET_BUILD_DIR}/ClusterDuck.framework/Versions/A/ClusterDuck\n\ninstall_name_tool -change /usr/local/opt/libiomp/lib/libiomp5.dylib \\\n@rpath/ClusterDuck.framework/Versions/A/Frameworks/libiomp5.dylib \\\n${TARGET_BUILD_DIR}/ClusterDuck.framework/Versions/A/ClusterDuck\n\ninstall_name_tool -change /usr/local/opt/libiomp/lib/libiomp5.dylib \\\n@rpath/ClusterDuck.framework/Versions/A/Frameworks/libiomp5.dylib \\\n${TARGET_BUILD_DIR}/ClusterDuck.framework/Versions/A/Frameworks/libcluster.dylib";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F1431561CE74D6200E8A34F /* Sources */ = {
