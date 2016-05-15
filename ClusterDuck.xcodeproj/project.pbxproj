@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28EC25E71CE8A4960033684F /* libcluster.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EC25E61CE8A4960033684F /* libcluster.dylib */; };
+		28EC25E81CE8A4A70033684F /* libcluster.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 28EC25E61CE8A4960033684F /* libcluster.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		5F14315F1CE74D6300E8A34F /* ClusterDuck.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14315E1CE74D6300E8A34F /* ClusterDuck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F1431661CE74D6300E8A34F /* ClusterDuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */; };
 		5F14316B1CE74D6300E8A34F /* ClusterDuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */; };
-		5F1431761CE74DB400E8A34F /* libcluster.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1431751CE74DB400E8A34F /* libcluster.a */; };
 		5F1431791CE74DF900E8A34F /* MPGaussianMixtureModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F1431771CE74DF900E8A34F /* MPGaussianMixtureModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F14317A1CE74DF900E8A34F /* MPGaussianMixtureModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */; };
 		5F14317C1CE7514800E8A34F /* testdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14317B1CE7514800E8A34F /* testdata.h */; };
@@ -35,6 +36,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				28EC25E81CE8A4A70033684F /* libcluster.dylib in Copy Libraries */,
 				5F1431801CE751DB00E8A34F /* libiomp5.dylib in Copy Libraries */,
 			);
 			name = "Copy Libraries";
@@ -43,13 +45,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		28EC25E61CE8A4960033684F /* libcluster.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcluster.dylib; path = Libraries/libcluster.dylib; sourceTree = "<group>"; };
 		5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClusterDuck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F14315E1CE74D6300E8A34F /* ClusterDuck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClusterDuck.h; sourceTree = "<group>"; };
 		5F1431601CE74D6300E8A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F1431651CE74D6300E8A34F /* ClusterDuckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClusterDuckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClusterDuckTests.m; sourceTree = "<group>"; };
 		5F14316C1CE74D6300E8A34F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5F1431751CE74DB400E8A34F /* libcluster.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcluster.a; path = Libraries/libcluster.a; sourceTree = "<group>"; };
 		5F1431771CE74DF900E8A34F /* MPGaussianMixtureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPGaussianMixtureModel.h; sourceTree = "<group>"; };
 		5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MPGaussianMixtureModel.mm; sourceTree = "<group>"; };
 		5F14317B1CE7514800E8A34F /* testdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testdata.h; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F1431761CE74DB400E8A34F /* libcluster.a in Frameworks */,
+				28EC25E71CE8A4960033684F /* libcluster.dylib in Frameworks */,
 				5F14317E1CE751A100E8A34F /* libiomp5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +82,7 @@
 		5F1431511CE74D6200E8A34F = {
 			isa = PBXGroup;
 			children = (
-				5F1431751CE74DB400E8A34F /* libcluster.a */,
+				28EC25E61CE8A4960033684F /* libcluster.dylib */,
 				5F14317D1CE751A100E8A34F /* libiomp5.dylib */,
 				5F14315D1CE74D6200E8A34F /* ClusterDuck */,
 				5F1431691CE74D6300E8A34F /* ClusterDuckTests */,
@@ -433,6 +435,7 @@
 				5F1431711CE74D6300E8A34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F1431721CE74D6300E8A34F /* Build configuration list for PBXNativeTarget "ClusterDuckTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +444,7 @@
 				5F1431741CE74D6300E8A34F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
