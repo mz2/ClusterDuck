@@ -13,7 +13,7 @@
 @interface MPSummaryBGMM
 
 @property (readonly) double freeEnergy;
-@property (readonly, nonnull) double clusterWeights;
+@property (readonly) double clusterWeights;
 @property (readonly, nonnull) NSArray<NSNumber *> covariances;
 
 @end

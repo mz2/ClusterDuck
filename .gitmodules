@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/Surge"]
+	path = Carthage/Checkouts/Surge
+	url = ssh://git@github.com/mz2/Surge.git
