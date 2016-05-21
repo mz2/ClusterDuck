@@ -10,11 +10,21 @@
 
 @class MPBayesianGaussianMixture;
 
+@interface MPSummaryBGMM
+
+@property (readonly) double freeEnergy;
+@property (readonly, nonnull) double clusterWeights;
+@property (readonly, nonnull) NSArray<NSNumber *> covariances;
+
+@end
+
 @interface MPGaussianMixtureModel : NSObject
 
 - (nonnull instancetype)init NS_UNAVAILABLE;
 
-+ (nonnull NSArray<MPBayesianGaussianMixture*> *)bayesianGaussianMixtureModelForInput:(nonnull NSArray<NSArray<NSNumber *> *> *)numbers;
++ (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(nonnull NSArray<NSArray<NSNumber *> *> *)numbers
+                                          dirichletPriorAlpha:(double)alpha
+                                         expectedClusterCount:(NSUInteger)expectedComponents;
 
 @end
 

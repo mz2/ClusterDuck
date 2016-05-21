@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28EC25E71CE8A4960033684F /* libcluster.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28EC25E61CE8A4960033684F /* libcluster.dylib */; };
-		28EC25E81CE8A4A70033684F /* libcluster.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 28EC25E61CE8A4960033684F /* libcluster.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		28EC25E81CE8A4A70033684F /* libcluster.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 28EC25E61CE8A4960033684F /* libcluster.dylib */; };
+		5F0EFA1C1CED427800A4CED0 /* ClusterDuck.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5F14315F1CE74D6300E8A34F /* ClusterDuck.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14315E1CE74D6300E8A34F /* ClusterDuck.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F1431661CE74D6300E8A34F /* ClusterDuck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14315B1CE74D6200E8A34F /* ClusterDuck.framework */; };
 		5F14316B1CE74D6300E8A34F /* ClusterDuckTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F14316A1CE74D6300E8A34F /* ClusterDuckTests.m */; };
@@ -16,7 +17,7 @@
 		5F14317A1CE74DF900E8A34F /* MPGaussianMixtureModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5F1431781CE74DF900E8A34F /* MPGaussianMixtureModel.mm */; };
 		5F14317C1CE7514800E8A34F /* testdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F14317B1CE7514800E8A34F /* testdata.h */; };
 		5F14317E1CE751A100E8A34F /* libiomp5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F14317D1CE751A100E8A34F /* libiomp5.dylib */; };
-		5F1431801CE751DB00E8A34F /* libiomp5.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 5F14317D1CE751A100E8A34F /* libiomp5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		5F1431801CE751DB00E8A34F /* libiomp5.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = 5F14317D1CE751A100E8A34F /* libiomp5.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		5F0EFA191CED407900A4CED0 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F0EFA1C1CED427800A4CED0 /* ClusterDuck.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5F14317F1CE751D100E8A34F /* Copy Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,7 +157,7 @@
 				5F1431581CE74D6200E8A34F /* Headers */,
 				5F1431591CE74D6200E8A34F /* Resources */,
 				5F14317F1CE751D100E8A34F /* Copy Libraries */,
-				5F3A5D6F1CE8AEFE005CB68B /* ShellScript */,
+				5F3A5D6F1CE8AEFE005CB68B /* Modify the install name of linked dylibs */,
 			);
 			buildRules = (
 			);
@@ -163,6 +175,7 @@
 				5F1431611CE74D6300E8A34F /* Sources */,
 				5F1431621CE74D6300E8A34F /* Frameworks */,
 				5F1431631CE74D6300E8A34F /* Resources */,
+				5F0EFA191CED407900A4CED0 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,13 +240,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F3A5D6F1CE8AEFE005CB68B /* ShellScript */ = {
+		5F3A5D6F1CE8AEFE005CB68B /* Modify the install name of linked dylibs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Modify the install name of linked dylibs";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +302,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -340,7 +354,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -370,6 +384,7 @@
 		5F1431701CE74D6300E8A34F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -392,6 +407,7 @@
 		5F1431711CE74D6300E8A34F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -414,9 +430,14 @@
 		5F1431731CE74D6300E8A34F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ClusterDuckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuckTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -425,9 +446,14 @@
 		5F1431741CE74D6300E8A34F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ClusterDuckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.piipari.ClusterDuckTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

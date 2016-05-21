@@ -90,17 +90,19 @@ using namespace distributions;
     return expectedClusters;
 }
 
-+ (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(NSArray<NSArray<NSNumber *> *> *)numbers {
++ (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(NSArray<NSArray<NSNumber *> *> *)numbers
+                                          dirichletPriorAlpha:(double)alpha
+                                         expectedClusterCount:(NSUInteger)expectedComponents {
     MatrixXd X = [self.class doubleMatrixForInput:numbers];
     
     //vector<GDirichlet> weights;
     vector<GaussWish>  clusters;
     
-    distributions::Dirichlet weights;
+    distributions::Dirichlet weights(alpha);
     MatrixXd qZ;
     
     clock_t start = clock();
-    double freeEnergy = learnBGMM(X, qZ, weights, clusters, 1);
+    double freeEnergy = learnBGMM(X, qZ, weights, clusters, X.rows());
     double stop = (double)((clock() - start))/CLOCKS_PER_SEC;
     
     cout << "BMCC Elapsed time = " << stop << " sec." << endl;

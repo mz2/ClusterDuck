@@ -150,7 +150,9 @@
 }
 
 - (void)testExample {
-    [MPGaussianMixtureModel bayesianGaussianMixtureModelForInput:[self testNumbers]];
+    NSArray *testNumbers = [self testNumbers];
+    [MPGaussianMixtureModel bayesianGaussianMixtureModelForInput:testNumbers dirichletPriorAlpha:100.0 expectedComponentCount:1];
+    
 }
 
 @end
