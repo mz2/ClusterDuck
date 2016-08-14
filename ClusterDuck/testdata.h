@@ -181,7 +181,7 @@ void makeXdata (
              9.6017,    9.3463;
 
   Xcat.setZero(120,2);
-  const int J = X.size();
+  const size_t J = X.size();
   for (int j=0; j < J; ++j)
     Xcat.block(j*10, 0, 10, 2) = X[j];
 

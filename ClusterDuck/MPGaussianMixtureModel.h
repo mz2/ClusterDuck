@@ -14,7 +14,7 @@
 
 @property (readonly) double freeEnergy;
 @property (readonly) double clusterWeights;
-@property (readonly, nonnull) NSArray<NSNumber *> covariances;
+@property (readonly, nonnull) NSArray<NSNumber *> *covariances;
 
 @end
 
@@ -22,9 +22,9 @@
 
 - (nonnull instancetype)init NS_UNAVAILABLE;
 
-+ (NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(nonnull NSArray<NSArray<NSNumber *> *> *)numbers
-                                          dirichletPriorAlpha:(double)alpha
-                                         expectedClusterCount:(NSUInteger)expectedComponents;
++ (nonnull NSArray<NSNumber *> *)bayesianGaussianMixtureModelForInput:(nonnull NSArray<NSArray<NSNumber *> *> *)numbers
+                                                  dirichletPriorAlpha:(double)alpha
+                                                 expectedClusterCount:(NSUInteger)expectedComponents;
 
 @end
 
